@@ -14,4 +14,7 @@ module.exports = function (server) {
     // router.route('/test').get(function (req, res, next) {
     //     res.send('Funciona mesmo')
     // })
+
+    const billingSummaryServices = require('../api/billingSummary/billingSummaryService')
+    router.route('/billingSummary').get(billingSummaryServices.getSummary)
 }
